@@ -1,0 +1,22 @@
+{
+  "name": "circuit-pup-bot",
+  "version": "1.0.0",
+  "description": "## What will you need? * A Raspberry PI 3 * A SD Card (16GB recommended) * USB Keyboard * USB Mouse * HDMI Monitor * USB WebCam with microphone * Speakers with 3.5mm jack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdmartins/circuit-pup-bot.git"
+  },
+  "author": "Walter Martins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wdmartins/circuit-pup-bot/issues"
+  },
+  "homepage": "https://github.com/wdmartins/circuit-pup-bot#readme",
+  "dependencies": {
+    "puppeteer": "^1.5.0"
+  }
+}

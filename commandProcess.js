@@ -1,7 +1,6 @@
 'use strict';
-let menu = require('./menu.json');
 
-let CommandProcessor = function() {
+let CommandProcessor = function(logger, menu) {
     this.processCommand = function(command, cb) {
         let commArray = command.split(' ');
         let moreToProcess = true;
@@ -42,7 +41,3 @@ let CommandProcessor = function() {
         });
     };
 };
-
-module.exports = CommandProcessor;
-
-
