@@ -1,4 +1,4 @@
-# circuit-monas-bot
+# circuit-pup-bot
 
 ## What will you need?
 * A Raspberry PI 3
