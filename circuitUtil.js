@@ -1,8 +1,5 @@
 const logger = console;
 
-// let videoElement;
-let audioElement;
-
 let Bot = function(client, config, menu) {
     let self = this;
     let commander = new CommandProcessor(logger, menu);
@@ -427,13 +424,14 @@ let Bot = function(client, config, menu) {
             let mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
 
             // For Debugging show on index.html page
-            // videoElement = document.querySelector('video');
+            // let videoElement = document.querySelector('video');
             // videoElement.srcObject = mediaStream;
-            // videoElement.onloadedmetadata = e => videoElement.play();
+            // videoElement.onloadedmetadata = (e) => videoElement.play();
 
-            audioElement = document.querySelector('audio');
+            let audioElement = document.querySelector('audio');
             let remoteAudioStream = client.getRemoteStreams(call.callId).find((s) => s.getAudioTracks().length > 0);
             audioElement.srcObject = remoteAudioStream;
+            audioElement.play();
 
             await client.setAudioVideoStream(call.callId, mediaStream);
             await sleep(2000);
@@ -441,9 +439,3 @@ let Bot = function(client, config, menu) {
         }
     };
 };
-
-// let bot = new Bot(new Circuit.Client(config.bot));
-// bot.logonBot()
-//     .then(bot.updateUserData)
-//     .then(bot.sayHi)
-//     .catch(bot.terminate);

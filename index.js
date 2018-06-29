@@ -12,12 +12,14 @@ let accessToken;
 (async () => {
     try {
         browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
+            executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
             args: [
               '--auto-open-devtools-for-tabs',
-              '--no-sandbox',
-              '--disable-setuid-sandbox',
-              // '--use-fake-ui-for-media-stream',
+              // '--no-sandbox',
+              // '--disable-setuid-sandbox',
+              '--use-fake-ui-for-media-stream',
+              // '--ignore-autoplay-restrictions',
               // '--mute-audio',
               // '--use-fake-device-for-media-stream',
               // '--unsafely-treat-insecure-origin-as-secure',
